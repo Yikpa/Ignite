@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(0, 72%, 71%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+
+  /* Ignite specific colors */
+  --ignite-bg: hsl(0, 0%, 5.9%);
+  --ignite-surface: hsl(0, 0%, 10.2%);
+  --ignite-surface-light: hsl(0, 0%, 14.9%);
+  --ignite-open: hsl(0, 72%, 71%);
+  --ignite-neutral: hsl(51, 100%, 60%);
+  --ignite-closed: hsl(220, 13%, 46%);
+  --ignite-text: hsl(0, 0%, 97.3%);
+  --ignite-text-muted: hsl(220, 9%, 64%);
+  --ignite-text-dim: hsl(220, 13%, 46%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(0, 72%, 71%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--ignite-bg);
+    color: var(--ignite-text);
+  }
+}
+
+@layer utilities {
+  .bg-ignite-bg {
+    background-color: var(--ignite-bg);
+  }
+  
+  .bg-ignite-surface {
+    background-color: var(--ignite-surface);
+  }
+  
+  .bg-ignite-surface-light {
+    background-color: var(--ignite-surface-light);
+  }
+  
+  .bg-ignite-open {
+    background-color: var(--ignite-open);
+  }
+  
+  .bg-ignite-neutral {
+    background-color: var(--ignite-neutral);
+  }
+  
+  .bg-ignite-closed {
+    background-color: var(--ignite-closed);
+  }
+  
+  .text-ignite-text {
+    color: var(--ignite-text);
+  }
+  
+  .text-ignite-text-muted {
+    color: var(--ignite-text-muted);
+  }
+  
+  .text-ignite-text-dim {
+    color: var(--ignite-text-dim);
+  }
+  
+  .text-ignite-open {
+    color: var(--ignite-open);
+  }
+  
+  .text-ignite-neutral {
+    color: var(--ignite-neutral);
+  }
+  
+  .text-ignite-closed {
+    color: var(--ignite-closed);
+  }
+  
+  .border-ignite-surface-light {
+    border-color: var(--ignite-surface-light);
+  }
+
+  .shadow-ignite-open {
+    --tw-shadow-color: var(--ignite-open);
+  }
+  
+  .shadow-ignite-neutral {
+    --tw-shadow-color: var(--ignite-neutral);
+  }
+  
+  .shadow-ignite-closed {
+    --tw-shadow-color: var(--ignite-closed);
+  }
+
+  .animate-pulse-soft {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
